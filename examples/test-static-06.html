@@ -1,6 +1,6 @@
 <html>
     <head>
-        <script src="jquery-1.3.2.min.js"></script>
+        <script src="jquery-1.4.2.js"></script>
     </head>
 
     <body>
@@ -17,25 +17,25 @@
         ctrlKey: <input id="kp_ctrlKey"><br/>
         altKey: <input id="kp_altKey"><br/>
         <script>
-        
+
             $(document).bind('keydown', KdDescribeEvent);
             $(document).bind('keypress', KpDescribeEvent);
-            
+
             function KdDescribeEvent(event){
                 $('#kd_currentTarget').val(event.currentTarget);
                 $('#kd_which').val(event.which);
                 $('#kd_shiftKey').val(event.shiftKey);
                 $('#kd_ctrlKey').val(event.ctrlKey);
-                $('#kd_altKey').val(event.altKey);            
+                $('#kd_altKey').val(event.altKey);
             }
             function KpDescribeEvent(event){
                 $('#kp_currentTarget').val(event.currentTarget);
                 $('#kp_which').val(event.which);
                 $('#kp_shiftKey').val(event.shiftKey);
                 $('#kp_ctrlKey').val(event.ctrlKey);
-                $('#kp_altKey').val(event.altKey);            
+                $('#kp_altKey').val(event.altKey);
             }
-            
+
         </script>
     </body>
 </html>
