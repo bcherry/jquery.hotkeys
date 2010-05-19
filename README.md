@@ -24,6 +24,14 @@ If you want to use more than one modifiers (e.g. alt+ctrl+z) you should define t
 
 Hotkeys aren't tracked if you're inside of an input element (unless you explicitly bind the hotkey directly to the input). This helps to avoid conflict with normal user typing.
 
+## Sequences
+
+You can bind a key sequence to any event type by using an array of key combos in place of a single combo.  In this case, it waits for the entire sequence to be entered, in order, before invoking the handler.  Here's the syntax:
+
+    #(document).bind("keydown", ["a", "b", "c"], function () {
+        alert("a->b->c!");
+    });
+
 ## jQuery Compatibility
 
 Works with jQuery 1.4.2 and newer.

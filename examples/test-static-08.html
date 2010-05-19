@@ -10,7 +10,12 @@
         <script>
             $(document).bind("keydown", ["a", "b", "c"], function () {
                 alert("woot");
+            });
+
+            $(document).bind("keydown", ["up", "up", "down", "down", "left", "right", "left", "right", "b", "a", "return"], function () {
+                alert("konami!");
             })
+
         </script>
     </body>
 </html>
