@@ -97,7 +97,6 @@
 
 			for ( var i = 0, l = keys.length; i < l; i++ ) {
 				if ( possible[ keys[i] ] ) {
-					console.log(sequenceIndex);
 					if ( !isSequence || sequenceIndex === sequenceLength - 1 ) {
 						sequenceIndex = 0;
 						return origHandler.apply( this, arguments );
