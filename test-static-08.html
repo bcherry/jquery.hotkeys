@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script src="jquery-1.4.2.js"></script>
+        <script src="jquery.hotkeys.js"></script>
+    </head>
+
+    <body>
+        <h2>Sequences</h2>
+        <p>Try a->b->c (you should be alerted with "woot!")</p>
+        <script>
+            $(document).bind("keydown", ["a", "b", "c"], function () {
+                alert("woot");
+            })
+        </script>
+    </body>
+</html>
