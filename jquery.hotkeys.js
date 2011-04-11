@@ -54,8 +54,10 @@
 			keys = keyData.toLowerCase().split(" ");
 
 			// Don't fire in text-accepting inputs that we didn't directly bind to
+			var text_input_types = ["text", "search", "tel", "url", "datetime", "date",
+				"month", "week", "time", "datetime-local", "number"];
 			if ( this !== event.target && (/textarea|select/i.test( event.target.nodeName ) ||
-				 event.target.type === "text") ) {
+				 jQuery.inArray(event.target.type, text_input_types) !== -1 ) ) {
 				return;
 			}
 
